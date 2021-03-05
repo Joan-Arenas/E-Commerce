@@ -1,0 +1,57 @@
+version:  '3.0'
+services:
+
+  e-commerce-proxy:
+    build:
+      context: .docker/proxy
+      dockerfile: ./Dockerfile
+    restart: on-failure
+    ports:
+      - '$API_IP:80:80'
+    volumes:
+      - '$API_PROJECT_PATH/public/:/var/www/e-commerce'
+    depends_on:
+      - e-commerce-php
+
+  e-commerce-php:
+    build:
+      context: .docker/php
+      dockerfile: ./Dockerfile
+    restart: on-failure
+    volumes:
+      - '$API_PROJECT_PATH/:/var/www/e-commerce'
+      - './.docker/php/php.ini-development:/usr/local/etc/php/php.ini'
+    env_file:
+      - ./.docker/php/env/dev.env
+    user: '$USERID:$GROUPID'
+    depends_on:
+      - db
+      - cache
+
+  ## Configuration db
+  db:
+    image: postgres:12
+    restart: on-failure
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgresdata:/var/lib/postgres
+    environment:
+      - POSTGRES_PASSWORD=ecommerce
+      - POSTGRES_USER=ecommerce
+
+  mail:
+    image: tophfr/mailcatcher
+    ports:
+      - '1080:80'
+      - '1025:25'
+
+  cache:
+    image: redis:5.0.5-alpine
+    volumes:
+      - redisdata:/var/lib/redis
+    restart: on-failure
+
+volumes:
+  postgresdata:
+  redisdata:
