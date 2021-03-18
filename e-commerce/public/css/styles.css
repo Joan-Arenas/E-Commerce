@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+a {
+    font-family: 'Prata', serif;
+
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+/*----------------------------  ******* DEBUT MASTHEAD *******  -------------------------------------------------*/
+
+header.masthead {
+    padding-top: 20.5rem;
+    padding-bottom: 6rem;
+    text-align: center;
+    color: #fff;
+    background-image: url("../assets/img/head.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+header.masthead .masthead-subheading {
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.5rem;
+    margin-bottom: 25px;
+
+}
+
+header.masthead .masthead-heading {
+    font-size: 3.25rem;
+    font-weight: 700;
+    line-height: 3.25rem;
+    margin-bottom: 2rem;
+    font-family: 'Cormorant Unicase', serif;
+}
+
+/*---------------------------DEBUT POUR MEDIA COVER PAGE ACCUEIL*/
+@media (min-width: 768px) {
+    header.masthead {
+        padding-top: 17rem;
+        padding-bottom: 14rem;
+    }
+
+    /*---------------------------FIN POUR MEDIA COVER PAGE ACCUEIL*/
+    /*---------------------------DEBUT  SOUS TITRE "Soins, visage, corps et cheveux"*/
+    header.masthead .masthead-subheading {
+        font-size: 2.25rem;
+        font-style: italic;
+        line-height: 2.25rem;
+        margin-bottom: 4rem;
+    }
+
+    /*---------------------------FIN  SOUS TITRE "Soins, visage, corps et cheveux"*/
+    /*---------------------------DEBUT  TITRE "People InBEAUTY"*/
+    header.masthead .masthead-heading {
+        font-size: 5.5rem;
+        font-weight: 800;
+        line-height: 4.5rem;
+        margin-bottom: 35px;
+    }
+
+    /*---------------------------FIN  TITRE "People InBEAUTY"*/
+    /*---------------------------FIN MASTHEAD-------------------------------------------------------------------------*/
+    /*----------------------------  ******* DEBUT CATALOGUE *******  -------------------------------------------------*/
+    .jumbotron {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        margin-bottom: 0;
+        background-color: #fff;
+    }
+
+    @media (min-width: 768px) {
+        .jumbotron {
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+    }
+
+    .jumbotron p:last-child {
+        margin-bottom: 0;
+    }
+
+    .jumbotron h1 {
+        font-weight: 300;
+    }
+
+    .jumbotron .container {
+        max-width: 40rem;
+    }
+
+    footer {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        background: #333333;
+        color: whitesmoke;
+    }
+
+    footer p {
+        margin-bottom: .25rem;
+
+    }
+
+    /*------------------------FIN CATALOGUE*/
+    
+    
+    /*----------------------------  ******* RETOUCHE EASY ADMIN CSS*******  -------------------------------------------------*/
+
+
+
+}

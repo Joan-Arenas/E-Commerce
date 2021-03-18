@@ -2,21 +2,23 @@
 
 
 
-{% block title %}Register!{% endblock %}
+{% block title %}{% endblock %}
 
 {% block body %}
 
     {{ parent() }}
-    <h2>{{ titre_section }}</h2>
+    <div class="login-form">
+        <h2>{{ titre_section }}</h2>
 
-    {{ form_start(registrationForm) }}
+        {{ form_start(registrationForm) }}
 
-    {{ form_widget(registrationForm) }}
+        {{ form_widget(registrationForm) }}
 
-    {# {{ form_row(registrationForm.plainPassword.first) }}
-    {{ form_row(registrationForm.plainPassword.second) }} #}
 
-    <button type="submit">Register!</button>
-    {{ form_end(registrationForm) }}
+
+        <button type="submit">S'enregistrer</button>
+        {{ form_end(registrationForm) }}
+    </div>
+
 
 {% endblock %}
