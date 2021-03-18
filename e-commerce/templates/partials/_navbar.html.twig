@@ -1,0 +1,93 @@
+{# DEBUT NAVBAR #}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{path('accueil')}}">ACUAR - Design</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                {#HOME#}
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{path('accueil')}}">Home</a>
+                </li>
+
+                {#CATALOGUE#}
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Catalogue</a>
+                </li>
+
+
+                {#CONTACT#}
+                <li class="nav-item">
+                    <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Contact</a>
+                </li>
+
+            </ul>
+
+            <ul class="navbar-nav text-right">
+                {#DASHBOARD#}
+                <li class="nav-item">
+                    <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">Dashboard</a>
+                </li>
+
+                {#PANIER#}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarPanier" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fas fa-shopping-basket"></i> Panier
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Ajouter</a></li>
+                        <li><a class="dropdown-item" href="#">Supprimer</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+
+                {#LOGIN#}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{path('app_login')}}" tabindex="-1" aria-disabled="true">
+                        <i class="fas fa-sign-in-alt"></i>
+                        Login
+                    </a>
+                </li>
+
+                {#REGISTER#}
+                <li class="nav-item">
+                    <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"><i class="fas fa-user"></i>
+                        Register
+                    </a>
+                </li>
+
+
+                {#MON COMPTE#}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarCompte" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        Mon Compte
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Se Connecter</a></li>
+                        <li><a class="dropdown-item" href="#">Déconnecter</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+
+
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
